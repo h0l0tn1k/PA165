@@ -48,6 +48,9 @@ public class Product {
 	 */
 	@Temporal(TemporalType.DATE)
 	private java.util.Date addedDate;
+
+	@ManyToMany
+	private Set<Category> categories = new HashSet<Category>();
 	
 
 	@OneToOne
@@ -70,7 +73,6 @@ public class Product {
 
 
 	/**
-	 * TODO these two methods are here just to make Task04 compilable. After you are finished
 	 * with TASK 02 you should delete this empty method
 	 * @param kitchen
 	 */
@@ -83,7 +85,7 @@ public class Product {
 //	public void removeCategory(Category category)	{
 //		this.categories.remove(category);
 //	}
-//	
+//
 //	public void addCategory(Category c) {
 //		categories.add(c);
 //		c.addProduct(this);
